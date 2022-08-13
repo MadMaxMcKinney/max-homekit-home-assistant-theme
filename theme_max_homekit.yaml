@@ -1,0 +1,32 @@
+max-homekit:
+    # Home Assistant override
+    ha-card-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.16)
+    ha-card-border-radius: 20px
+    app-header-background-color: transparent
+
+    # Light/dark specific vars
+    modes:
+        light: {
+            app-header-text-color: black
+        }
+        dark: {
+            app-header-text-color: white
+        }
+        
+    # Add some margin to the entire dashboard for desktop and mobile
+    card-mod-theme: max-homekit
+    card-mod-root: |
+        #view {
+            justify-content: center;
+        }
+    card-mod-view: |
+        hui-view {
+            margin: 24px;
+            max-width: 1400px !important;
+        }
+        @media(max-width: 900px) {
+            hui-view {
+                margin: 8px;
+                margin-bottom: 32px;
+            }
+        }
